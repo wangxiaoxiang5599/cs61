@@ -51,6 +51,14 @@ def largest_factor(x):
     1
     """
     "*** YOUR CODE HERE ***"
+    if x <= 1:
+        return x
+    y = x - 1
+    
+    while x % y > 0:
+        y -= 1
+    return y
+    
 
 
 def if_function(condition, true_result, false_result):
@@ -96,12 +104,15 @@ def with_if_function():
 
 def cond():
     "*** YOUR CODE HERE ***"
+    return False
 
 def true_func():
     "*** YOUR CODE HERE ***"
+    return print(42)
 
 def false_func():
     "*** YOUR CODE HERE ***"
+    return print(47)
 
 
 def hailstone(x):
@@ -120,4 +131,15 @@ def hailstone(x):
     7
     """
     "*** YOUR CODE HERE ***"
+    step = 1
+    print(x)
+    while x != 1:
+        if x % 2 == 0:
+            x = x // 2
+        else:
+            x = x * 3 + 1
+        print(x)
+        step += 1
+    return step
+    
 
